@@ -1,0 +1,11 @@
+add_executable(day06p1 day06p1.cpp)
+# add_executable(day06p2 day06p2.cpp)
+
+if(CLANG_TIDY_COMMAND)
+    set_target_properties(day06p1 PROPERTIES CXX_CLANG_TIDY "${CLANG_TIDY_COMMAND}")
+    # set_target_properties(day06p2 PROPERTIES CXX_CLANG_TIDY "${CLANG_TIDY_COMMAND}")
+endif()
+if(CPPCHECK_COMMAND)
+    set_target_properties(day06p1 PROPERTIES CXX_CPPCHECK "${CPPCHECK_COMMAND}")
+    # set_target_properties(day06p2 PROPERTIES CXX_CPPCHECK "${CPPCHECK_COMMAND}")
+endif()
